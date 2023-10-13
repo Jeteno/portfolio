@@ -1,0 +1,120 @@
+.header__page {
+   padding: 1% 0;
+}
+.header__container {
+}
+.header__body {
+}
+.header__logo {
+   @extend %flexCenter;
+}
+.header__logo-link {
+}
+.header__logo-img {
+}
+.header__nav {
+   flex: 1 1 auto;
+   @extend %flexCenter;
+   @media screen and (max-width: 425px){
+      position: fixed;
+      z-index: 5;
+      top: 58px;
+      right: -100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: right 0.3s ease 0s;
+      overflow: auto;
+      padding: 25px 0 25px 0; 
+      gap: 25px;  
+      background-color: rgb(52, 53, 58);
+   }
+}
+.header__list {
+   @extend %flexCenter;
+   gap: 20px;
+   @media screen and (max-width: 425px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+  }
+}
+.header__paragraph {
+}
+.header__paragraph-link {
+   color: #FFF;
+   font-family: $font-family;  
+   @include adaptiveFont(20, 18);
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px;
+   opacity: 0.5;
+   &:hover {
+      opacity: 1;
+      color: #fff;
+   }
+   @media screen and (max-width: 425px) {
+      text-align: left;
+   }
+}
+/*--active classes--*/
+.active__menu {
+   right: 0;
+   top: 0;
+   padding-left: 20px;
+   padding-right: 20px;
+   height: 100vh;
+}
+.active {
+   color: #fff;
+   opacity: 1;
+}
+/*--menu burger classes--*/
+.menu__icon {
+   display: none;
+   @media screen and (max-width: 425px){
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 39px;
+      height: 16px;
+      cursor: pointer;
+      top: 50%;
+      transform: translateY(-50%);
+      span, &::before, &::after {
+         left: -4px;
+         position: absolute;
+         height: 2px;
+         width: 100%;
+         transition: all 0.3s ease 0s;
+         background-color: #fff;;
+      }
+      &::before, &::after {
+         content: "";
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      span {
+         top: 50%;
+         transform: scale(1) translate(0px, -50%);
+      }
+   }
+}
+
+.menu__icon.active__menu span {
+   transform: scale(0) translate(0px, -50%);
+}
+.menu__icon.active__menu::before {
+   top: 50%;
+   transform: rotate(-45deg) translate(0px, -50%);
+}
+.menu__icon.active__menu::after {
+   bottom: 50%;
+   transform: rotate(45deg) translate(0px, 50%);
+}
