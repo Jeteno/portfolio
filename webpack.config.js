@@ -1,8 +1,9 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
    entry: path.resolve(__dirname, 'index.js'),
@@ -20,7 +21,7 @@ module.exports = {
       new CopyWebpackPlugin({
          patterns: [
             {
-               from: path.resolve(__dirname, './src/images'),
+               from: path.resolve(__dirname, './src/img'),
                to: path.resolve(__dirname, './dist/img'),
             }
          ]
@@ -34,27 +35,27 @@ module.exports = {
    },
    module: {
       rules: [
-         {
-            test: /\.scss$/i,
-            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-         },
-         {
-            test: /\.(png|jpe?g|gif|svg)$/i,
-            type: 'asset/resource',
-            generator: {
-               filename: 'img/[name][ext]',
+        {
+         test: /\.scss$/i,
+         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        },
+        {
+         test: /\.(png|jpe?g|gif|svg)$/i,
+         type: 'asset/resource',
+         generator: {
+            filename: 'img/[name][ext]',
             },
          },
          {
-            test: /\.(woff|woff2|eot|ttf|otf)$/i,
-            type: 'asset/resource',
-            generator: {
+           test: /\.(woff|woff2|eot|ttf|otf)$/i,
+           type: 'asset/resource',
+           generator: {
                filename: 'fonts/[name][ext]',
             },
          },
       ],
-   },
-   optimization: {
+    },
+    optimization: {
       minimizer: [
          '...',
          new CssMinimizerPlugin(),
@@ -63,6 +64,7 @@ module.exports = {
    performance: {
       hints: false,
       maxEntrypointSize: 512000,
-      maxAssetSize: 512000,
-   },
-};
+      maxAssetSize: 512000
+   }
+}
+
