@@ -1,20 +1,20 @@
 export function header() {
    const menuContent = [
       {
-         href: '#',
-         title: 'Обо мне',
+         href: '#about__page',
+         title: 'About',
       },
       {
          href: '#',
-         title: 'Стек',
+         title: 'Stack',
       },
       {
          href: '#',
-         title: 'Портфолио',
+         title: 'Portfolio',
       },
       {
          href: '#',
-         title: 'Контакты',
+         title: 'Contact',
       },
    ];
 

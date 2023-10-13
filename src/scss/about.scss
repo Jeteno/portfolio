@@ -1,0 +1,53 @@
+.about__page {
+   background-color: rgb(49, 51, 59);
+   box-shadow: inset 0px 25px 15px rgba(0, 0, 0, 0.1);
+}
+.animated__page {
+}
+.about__container {
+   padding: 10% 0;
+}
+.about__body {
+}
+.about__content {
+   @extend %flexColumns;
+   gap: 30px;
+}
+.about__content-title {
+}
+.about__title {
+   color: #FFF;
+   font-family: 'Roboto Slab', serif;
+   @include adaptiveFont(35, 30);
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px;
+}
+.about__content-subtitle {
+   @extend %flexColumns;
+   gap: 20px;
+}
+.about__subtitle {
+   position: relative;
+   color: #FFF;
+   font-family: $font-family;  
+   @include adaptiveFont(22, 18);
+   font-style: normal;
+   font-weight: 400;
+   line-height: 30px;
+   padding-left: 55px;
+   span {
+      @include adaptiveFont(23, 19);
+      font-weight: 400;
+      color: rgb(255, 200, 107);
+   }
+   &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: rgb(255, 200, 107);
+   }
+}

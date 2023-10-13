@@ -6,4 +6,4 @@ import { menuBurger } from "./src/modules/menu";
 
 header();
 menuBurger();
-scroll();
+// scroll();
