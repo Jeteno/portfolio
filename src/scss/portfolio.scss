@@ -1,0 +1,96 @@
+.portfolio__page {
+   background-color: rgb(49, 51, 59);
+}
+.portfolio__content-cards {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 30px;
+   @media screen and (max-width: 350px) {
+      gap: 15px;
+   }
+}
+.portfolio__card {
+   position: relative;
+   flex: 0 1 30%;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.portfolio__card-images {
+   width: 100%;
+   position: relative;
+   &:after {
+      content: "";
+      backdrop-filter: blur(2px); // Регулируйте значение blur для мутности эффекта
+      background-color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+}
+.portfolio__img {
+   width: 100%;
+}
+.portfolio__card-content {
+   background-color: rgba(49, 51, 59, 0.7);
+   position: absolute;
+   bottom: -10%;
+   height: 100%;
+   width: 100%;
+   @extend %flexCenter;
+   flex-direction: column;
+   opacity: 0;
+   transition: bottom 0.6s, opacity 0.3s;
+}
+.portfolio__card:hover .portfolio__card-content {
+   bottom: 0;
+   opacity: 1;
+}
+.portfolio__card-title {
+   color: #FFF;
+   @include adaptiveFont(24, 18);
+   @extend %fontStyleRegular;
+}
+.portfolio__subtitle {
+   color: #FFF;
+   @include adaptiveFont(20, 16);
+   @extend %fontStyleLight;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   display: -webkit-box;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.portfolio__card-btn {
+   @extend %btnHoverYellow;
+   &:hover {
+      @extend %btnHoverBorder;
+   }
+}
+.portfolio__card-btn-link {
+   color: #000;
+   @include adaptiveFont(20, 16);
+   @extend %fontStyleLight;
+}
+.portfolio__card-btn:hover .portfolio__card-btn-link {
+   color: $yellow;
+}
+.portfolio__content-button {
+   width: 100%;
+   @extend %flexCenter;
+}
+.portfolio__content-btn {
+   border-radius: 10px;
+   background-color: $yellow;
+   border: 2px solid $yellow;
+   text-align: center;
+   min-width: 230px;
+   padding: 1.5% 1%;
+   color: #000;
+   @include adaptiveFont(20, 16);
+   @extend %fontStyleLight;
+   &:hover {
+      @extend %btnHoverBorder;
+   }
+}

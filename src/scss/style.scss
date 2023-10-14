@@ -78,8 +78,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+@import "variables";
 @import "common";
 @import "header";
 @import "main-screen";
 @import "about";
 @import "stack";
+@import "portfolio";

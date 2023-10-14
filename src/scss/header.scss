@@ -1,16 +1,8 @@
 .header__page {
    padding: 1% 0;
 }
-.header__container {
-}
-.header__body {
-}
 .header__logo {
    @extend %flexCenter;
-}
-.header__logo-link {
-}
-.header__logo-img {
 }
 .header__nav {
    flex: 1 1 auto;
@@ -41,15 +33,11 @@
       width: 100%;
   }
 }
-.header__paragraph {
-}
 .header__paragraph-link {
    color: #FFF;
    font-family: $font-family;  
    @include adaptiveFont(20, 18);
-   font-style: normal;
-   font-weight: 500;
-   line-height: 24px;
+   @extend %fontStyleMedium;
    opacity: 0.5;
    &:hover {
       opacity: 1;

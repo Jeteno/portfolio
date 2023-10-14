@@ -1,26 +1,6 @@
 .stack__page {
    background-color: rgb(49, 51, 59);
 }
-.stack__container {
-}
-.stack__body {
-}
-.stack__content {
-   padding: 3.5% 0;
-   width: 100%;
-}
-.stack__content-title {
-   text-align: center;
-   margin-bottom: 30px;
-}
-.stack__title {
-   color: #FFF;
-   font-family: 'Roboto Slab', serif;
-   @include adaptiveFont(35, 30);
-   font-style: normal;
-   font-weight: 500;
-   line-height: 24px;
-}
 .stack__cards {
    display: flex;
    justify-content: space-between;
@@ -34,14 +14,12 @@
    background-color: rgb(61, 62, 66);
    border-radius: 20px;
    padding: 34px 24px 30px 24px;
-   display: flex;
+   @extend %flexCenter;
    flex-direction: column;
-   justify-content: center;
-   align-items: center;
+   flex: 1 1 23%;
    gap: 24px;
-   flex: 0 1 23%;
    &:hover {
-      background-color: rgb(255, 200, 107);
+      background-color: $yellow;
       animation-name: jump;
       animation-duration: 0.7s;
       animation-iteration-count: infinite;
@@ -60,10 +38,6 @@
 }
 .stack__card-image {
    text-align: center;
-}
-.stack__card-img {
-}
-.stack__card-content {
 }
 .stack__card-content-title {
    color: #FFF;
