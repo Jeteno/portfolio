@@ -14,6 +14,10 @@ export function header() {
       },
       {
          href: '#',
+         title: 'Experience',
+      },
+      {
+         href: '#',
          title: 'Contact',
       },
    ];

@@ -1,0 +1,71 @@
+.contact__page {
+   padding: 5% 0;
+}
+.contact__container {
+   width: 100%;
+   background-color: rgb(61, 61, 66);
+}
+.contact__body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+}
+.contact__content {
+   padding: 2%;
+}
+.contact__body-title {
+   position: absolute;
+   width: 100%;
+   top: -13px;
+   text-align: center;
+}
+.contact__title {
+   position: relative;
+   &::before {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 3px;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -100%);
+      background-color: $yellow;
+   }
+   &::after {
+      content: '';
+      position: absolute;
+      width: 40%;
+      height: 3px;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: $yellow;
+   }
+}
+.contact__content-cards {
+   @extend %flexCenter;
+   gap: 20px;
+}
+.contact__card {
+   @extend %flexCenter;
+   background-color: rgb(33, 34, 39);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+   border-radius: 20px;
+   padding: 1% 1.5%;
+   gap: 15px;
+   flex: 0 1 30%;
+}
+.contact__card-images {
+   width: 10%;
+}
+.contact__card-img {
+   width: 100%;
+}
+.contact__card-title {
+}
+.contact__card-title-link {
+   color: $yellow;
+   font-family: $font-family;  
+   @include adaptiveFont(23, 19);
+   @extend %fontStyleRegular;
+}
