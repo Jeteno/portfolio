@@ -12,7 +12,7 @@ module.exports = {
       path: path.resolve(__dirname, 'dist'),
       filename: 'main.js'
    },
-   mode: 'development',
+   mode: 'production',
    plugins: [
       new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({

@@ -3,18 +3,25 @@
 }
 .portfolio__content-cards {
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    flex-wrap: wrap;
    gap: 30px;
    padding-bottom: 1.5%;
-   @media screen and (max-width: 350px) {
+   @media screen and (max-width: 425px) {
       gap: 15px;
+      padding-bottom: 3%;
    }
 }
 .portfolio__card {
    position: relative;
    flex: 0 1 30%;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+   @media screen and (max-width: 630px) {
+      flex: 1 1 40%;
+   }
+   @media screen and (max-width: 425px) {
+      flex: auto;
+   }
 }
 .portfolio__card-images {
    width: 100%;

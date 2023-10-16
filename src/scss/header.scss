@@ -1,8 +1,14 @@
 .header__page {
    padding: 1% 0;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 2;
+   background-color: rgb(52, 53, 58);
 }
 .header__logo {
    @extend %flexCenter;
+   cursor: pointer;
 }
 .header__nav {
    flex: 1 1 auto;

@@ -1,7 +1,7 @@
 .experience__page {
    background-color: rgb(61, 62, 66);
-   box-shadow: inset 0px 15px 15px rgba(49, 51, 59, 1);
-
+   box-shadow: inset 0px -15px 15px rgba(52, 53, 58, 1),
+               inset 0px 15px 15px rgba(49, 51, 59, 1);
 }
 .experience__container {
 }
@@ -24,7 +24,11 @@
 .experience__description {
    display: flex;
    gap: 10px;
-   width: 70%
+   width: 70%;
+   @media screen and (max-width: 1024px) {
+      width: 95%;
+      padding-top: 5%;
+   }
 }
 .description__year {
    margin-right: 20px;

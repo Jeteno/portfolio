@@ -8,6 +8,6 @@ import { portfolio } from "./src/modules/portfolio";
 
 header();
 menuBurger();
-// scroll();
+scroll();
 stack();
 portfolio();

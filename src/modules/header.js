@@ -1,23 +1,23 @@
 export function header() {
    const menuContent = [
       {
-         href: '#about__page',
+         href: 'about__page',
          title: 'About',
       },
       {
-         href: '#',
+         href: 'stack__page',
          title: 'Stack',
       },
       {
-         href: '#',
+         href: 'portfolio__page',
          title: 'Portfolio',
       },
       {
-         href: '#',
+         href: 'experience__page',
          title: 'Experience',
       },
       {
-         href: '#',
+         href: 'contact__page',
          title: 'Contact',
       },
    ];
@@ -31,7 +31,7 @@ export function header() {
       result.forEach(item => {
         const cardBlock = `
          <li class="header__paragraph">
-            <a href="${item.href}" class="header__paragraph-link">
+            <a href="#${item.href}" class="header__paragraph-link">
                ${item.title}
             </a>
          </li>
