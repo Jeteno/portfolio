@@ -28,7 +28,7 @@
    position: relative;
    &:after {
       content: "";
-      backdrop-filter: blur(2px); // Регулируйте значение blur для мутности эффекта
+      backdrop-filter: blur(2px);
       background-color: rgba(255, 255, 255, 0.1);
       position: absolute;
       top: 0;
@@ -55,6 +55,10 @@
    bottom: 0;
    opacity: 1;
 }
+.touched {
+   bottom: 0;
+   opacity: 1;
+}
 .portfolio__card-title {
    color: #FFF;
    @include adaptiveFont(24, 18);
@@ -69,6 +73,12 @@
    display: -webkit-box;
    overflow: hidden;
    text-overflow: ellipsis;
+   @media screen and (max-width: 724px) {
+      -webkit-line-clamp: 2;
+   }
+   @media screen and (max-width: 425px) {
+      -webkit-line-clamp: 3;
+   }
 }
 .portfolio__card-btn {
    @extend %btnHoverYellow;
