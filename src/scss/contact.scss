@@ -18,9 +18,7 @@
    width: 100%;
    top: -13px;
    text-align: center;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   @extend %flexSpaceCenter;
    gap: 20px;
 }
 .contact__body-social {
@@ -28,9 +26,7 @@
    width: 100%;
    bottom: -20px;
    text-align: center;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   @extend %flexSpaceCenter;
    gap: 20px;
 }
 .left-line {
@@ -44,16 +40,9 @@
    flex: 1 1 auto;
 }
 .contact__socil-list {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+   @extend %flexSpaceCenter;
    gap: 15px;
 }
-.contact__social-paragraph {
-}
-.contact__social-link {
-}
-
 .contact__title {
    position: relative;
    flex: 1 0 auto;
@@ -72,17 +61,8 @@
    padding: 2% 2.5%;
    gap: 15px;
 }
-// .contact__card-images {
-//    width: 10%;
-// }
-// .contact__card-img {
-//    width: 100%;
-// }
-.contact__card-title {
-}
 .contact__card-title-link {
    color: $yellow;
-   font-family: $font-family;  
    @include adaptiveFont(23, 19);
    @extend %fontStyleRegular;
 }

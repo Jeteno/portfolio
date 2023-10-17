@@ -17,7 +17,7 @@
    }
 }
 .main-screen__title {
-   color: #FFF;
+   color: $white;
    font-family: $font-family;  
    @include adaptiveFont(26, 22);
    @extend %fontStyleMedium;
@@ -29,7 +29,7 @@
    }
 }
 .main-screen__subtitle {
-   color: #FFF;
+   color: $white;
    font-family: $font-family;  
    @include adaptiveFont(22, 18);
    font-style: normal;
@@ -52,7 +52,7 @@
    @extend %fontStyleMedium;
 }
 .main-screen__button:hover .main-screen__button-link {
-   color: #000;
+   color: $black;
 }
 .main-screen__image {
    width: 100%;

@@ -13,6 +13,8 @@ $maxWidth: 1440;
 
 $font-family: 'Roboto', sans-serif;
 $yellow: rgb(255, 200, 107);
+$white: #ffffff;
+$black: #000000;
 
 %fontStyleMedium {
    font-style: normal;
@@ -39,12 +41,23 @@ $yellow: rgb(255, 200, 107);
    align-items: center;
    justify-content: center;
 }
-
-%flexColumns{
+%flexColumnCommon {
    display: flex;
    flex-direction: column;
+}
+%flexColumns{
+   @extend %flexColumnCommon;
    align-items: flex-start;
    justify-content: flex-start;
+}
+%flexSpaceCenter {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+%flexColumnCenter {
+   @extend %flexColumnCommon;   
+   align-items: center;
 }
 %btnHoverBorder {
    border: 2px solid $yellow;

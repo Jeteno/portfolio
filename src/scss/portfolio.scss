@@ -60,12 +60,12 @@
    opacity: 1;
 }
 .portfolio__card-title {
-   color: #FFF;
+   color: $white;
    @include adaptiveFont(24, 18);
    @extend %fontStyleRegular;
 }
 .portfolio__subtitle {
-   color: #FFF;
+   color: $white;
    @include adaptiveFont(20, 16);
    @extend %fontStyleLight;
    -webkit-line-clamp: 4;
@@ -87,7 +87,7 @@
    }
 }
 .portfolio__card-btn-link {
-   color: #000;
+   color: $black;
    @include adaptiveFont(20, 16);
    @extend %fontStyleLight;
 }
@@ -105,7 +105,7 @@
    text-align: center;
    min-width: 230px;
    padding: 1.5% 1%;
-   color: #000;
+   color: $black;
    @include adaptiveFont(20, 16);
    @extend %fontStyleLight;
    &:hover {

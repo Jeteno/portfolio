@@ -40,10 +40,7 @@
    text-align: center;
 }
 .stack__card-content-title {
-   color: #FFF;
-   font-family: $font-family;  
+   color: $white;
+   @extend %fontStyleRegular;
    @include adaptiveFont(22, 18);
-   font-style: normal;
-   font-weight: 400;
-   line-height: 30px;
 }

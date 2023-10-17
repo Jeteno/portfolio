@@ -15,16 +15,12 @@
 }
 .about__subtitle {
    position: relative;
-   color: #FFF;
-   font-family: $font-family;  
+   color: $white;
+   @extend %fontStyleRegular;
    @include adaptiveFont(22, 18);
-   font-style: normal;
-   font-weight: 400;
-   line-height: 30px;
    padding-left: 55px;
    span {
       @include adaptiveFont(23, 19);
-      font-weight: 400;
       color: $yellow;
    }
    &::before {
