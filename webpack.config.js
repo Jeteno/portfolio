@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 module.exports = {
    entry: path.resolve(__dirname, 'index.js'),
@@ -25,7 +27,15 @@ module.exports = {
                to: path.resolve(__dirname, './dist/img'),
             }
          ]
-      })
+      }),
+      new ImageminPlugin({
+         plugins: [
+           imageminMozjpeg({
+             progressive: true,
+             quality: 80,
+           }),
+         ],
+      }),
    ],
    devServer: {
       static: {
@@ -41,7 +51,7 @@ module.exports = {
         },
         {
          test: /\.(png|jpe?g|gif|svg)$/i,
-         type: 'asset/resource',
+         type: 'asset',
          generator: {
             filename: 'img/[name][ext]',
             },
