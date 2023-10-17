@@ -60,6 +60,8 @@
    border-radius: 20px;
    padding: 2% 2.5%;
    gap: 15px;
+   flex: 1 1 auto;
+   max-width: 325px;
 }
 .contact__card-title-link {
    color: $yellow;
